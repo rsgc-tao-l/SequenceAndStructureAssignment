@@ -26,21 +26,19 @@ canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 1
 
 
-// This loop makes a 10 rows of columns
-for x in stride(from: 25, through: 475, by: 50){
-    
-    // This loop makes a single column, bottom to top
-    for y in stride(from: 25, through: 475, by: 50) {
-        
-        // Draw the shapes
-        canvas.drawEllipse(centreX: x, centreY: y, width: 2, height: 2)
-        canvas.drawRectangle(centreX: x, centreY: y, width: 50, height: 50)
+// rectangle grids
+for x in stride(from: 0, through: 475, by: 25){
+    for y in stride(from: 0, through: 475, by: 25){
+        var z = random(from: 0, toButNotIncluding: 2)
+        canvas.drawShapesWithFill = true
+        canvas.fillColor = Color(hue: y, saturation: 50, brightness: 65, alpha: 90)
+        canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 25, height: 25)
     }
 }
+//random background color for the rectangles.
 
-
-/*:
- ## Template code
- The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
- */
+///*:
+// ## Template code
+// The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
+// */
 PlaygroundPage.current.liveView = canvas.imageView
