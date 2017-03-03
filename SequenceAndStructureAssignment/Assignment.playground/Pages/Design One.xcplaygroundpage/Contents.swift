@@ -31,7 +31,17 @@ for x in stride(from: 0, through: 475, by: 25){
     for y in stride(from: 0, through: 475, by: 25){
         var z = random(from: 0, toButNotIncluding: 2)
         canvas.drawShapesWithFill = true
-        canvas.fillColor = Color(hue: y, saturation: 50, brightness: 65, alpha: 90)
+        if z == 1 {
+            canvas.fillColor = Color(hue: y, saturation: 50, brightness: 65, alpha: 90)
+        }
+        else{
+            var m = y + 180
+            if m > 360{
+                m = (m % 360)+10
+                canvas.fillColor = Color(hue: m, saturation: 50, brightness: 65, alpha: 90)
+            }
+        }
+        
         canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 25, height: 25)
     }
 }
