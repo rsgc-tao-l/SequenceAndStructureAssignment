@@ -36,6 +36,15 @@ for x in stride(from: 25, through: 475, by: 50){
         canvas.drawRectangle(centreX: x, centreY: y, width: 50, height: 50)
     }
 }
+// draw my quadratic
+if x > 300{
+    let h = x + 25
+    var priorY = 0
+    canvas.defaultLineWidth = 2
+    for p in 1...50{
+        let y = (p-h)*(p-h)
+        canvas.drawLine(fromX: p-1, fromY: priorY, toX: p, toY: y)
+        priorY = y
 
 
 /*:
