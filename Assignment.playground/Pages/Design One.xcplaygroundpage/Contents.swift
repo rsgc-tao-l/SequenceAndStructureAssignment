@@ -42,16 +42,16 @@ for x in stride(from: 0, through: 475, by: 25){
             }
         }
         canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 25, height: 25)
-        for o in stride(from: 1, through: 25, by: 1){
-            var i = random(from: 0, toButNotIncluding: 4)
-            if i == 0{
-                canvas.drawLine(fromX: x, fromY: y+o, toX: y+25, toY: (y + 26)-o)}
-            else{
-                canvas.drawLine(fromX: y+o, fromY: y, toX: x+25, toY: (y+26)-o)}
+//        for o in stride(from: 1, through: 25, by: 1){
+//            var i = random(from: 0, toButNotIncluding: 4)
+//            if i == 0{
+//                canvas.drawLine(fromX: x, fromY: y+o, toX: y+25, toY: (y + 26)-o)}
+//            else{
+//                canvas.drawLine(fromX: y+o, fromY: y, toX: x+25, toY: (y+26)-o)}
         }
     }
     
-}
+
 
 
 
