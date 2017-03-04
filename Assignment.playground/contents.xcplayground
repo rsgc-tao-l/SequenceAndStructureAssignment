@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos' display-mode='rendered' executeOnSourceChanges='false'>
+    <pages>
+        <page name='Introduction'/>
+        <page name='Example'/>
+        <page name='Lines'/>
+        <page name='Circles'/>
+        <page name='Rectangles'/>
+        <page name='Design One'/>
+        <page name='Design Two'/>
+        <page name='Design Three'/>
+    </pages>
+</playground>
