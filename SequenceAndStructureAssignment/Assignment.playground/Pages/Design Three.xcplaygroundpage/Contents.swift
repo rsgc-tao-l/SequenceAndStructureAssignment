@@ -58,7 +58,7 @@ for x in stride(from: 0, through: 475, by: 25){
             if i == 0{
                 canvas.drawLine(fromX: x, fromY: y+o, toX: (x+25)-o, toY: y+25)}
             else if i == 1{
-                canvas.drawLine(fromX: x+o, fromY: y, toX: x+25, toY: y+25-o)}
+                canvas.drawLine(fromX: (x+o), fromY: y, toX: x+25, toY: y+25-o)}
             else if i == 2{
                 canvas.drawLine(fromX: x, fromY: y+25-o, toX: x+25, toY: y-o)}
             else if i == 3{
