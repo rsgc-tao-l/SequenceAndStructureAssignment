@@ -47,7 +47,10 @@ for x in stride(from: 0, through: 475, by: 25){
             }
         }
         //the drawing of 400 blocks to form a unifrom grid with color.
+        canvas.drawShapesWithBorders = true
+        canvas.borderColor = Color(hue: y-130, saturation: 50, brightness: 75, alpha: 100)
         canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 25, height: 25)
+        
         //the following codes will generate a pattern of lines accordingly to the generated value "i".
         
         for o in stride(from: 1, through: 25, by: 1){
@@ -63,8 +66,6 @@ for x in stride(from: 0, through: 475, by: 25){
         }
     }
 }
-
-
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
