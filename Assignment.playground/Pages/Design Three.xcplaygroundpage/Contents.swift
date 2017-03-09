@@ -19,16 +19,16 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 500, height: 500)
+let canvas = Canvas(width: 1600, height: 1200)
 
 // Generate a grid
 canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 1
 
 // setting the x value for the grid background
-for x in stride(from: 0, through: 475, by: 25){
+for x in stride(from: 0, through: 1600, by: 25){
     //setting the y value for the grid background
-    for y in stride(from: 0, through: 475, by: 25){
+    for y in stride(from: 0, through: 1200, by: 25){
         //a random value to determine the color for each block.
         var i = random(from: 0, toButNotIncluding: 4)
         // a random value to determine a pattern out of the 4 that is to be drawn in each block.
@@ -51,10 +51,9 @@ for x in stride(from: 0, through: 475, by: 25){
         canvas.borderColor = Color(hue: y-130, saturation: 50, brightness: 75, alpha: 100)
         canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 25, height: 25)
         
-        //the following codes will generate a pattern of lines accordingly to the generated value "i".
+        //the following codes will create a pattern of lines accordingly to the generated value "i".
         
         for o in stride(from: 1, through: 25, by: 1){
-            let value = random(from: 0, toButNotIncluding: 2)
             if i == 0{
                 canvas.drawLine(fromX: x, fromY: y+o, toX: (x+25)-o, toY: y+25)}
             else if i == 1{
