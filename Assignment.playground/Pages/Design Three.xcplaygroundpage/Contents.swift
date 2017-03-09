@@ -24,11 +24,12 @@ let canvas = Canvas(width: 1600, height: 1200)
 // Generate a grid
 canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 1
+canvas.highPerformance = true
 
 // setting the x value for the grid background
-for x in stride(from: 0, through: 1600, by: 25){
+for x in stride(from: 0, through: 1575, by: 25){
     //setting the y value for the grid background
-    for y in stride(from: 0, through: 1200, by: 25){
+    for y in stride(from: 0, through: 1175, by: 25){
         //a random value to determine the color for each block.
         var i = random(from: 0, toButNotIncluding: 4)
         // a random value to determine a pattern out of the 4 that is to be drawn in each block.
@@ -65,6 +66,7 @@ for x in stride(from: 0, through: 1600, by: 25){
         }
     }
 }
+canvas.copyToClipboard()
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
