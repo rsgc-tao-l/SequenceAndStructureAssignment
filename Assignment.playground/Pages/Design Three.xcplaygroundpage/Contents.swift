@@ -47,7 +47,7 @@ for x in stride(from: 0, through: 1575, by: 25){
                 canvas.fillColor = Color(hue: m+50, saturation: 50, brightness: 90, alpha: 90)
             }
         }
-        //the drawing of 400 blocks to form a unifrom grid with color.
+        //the drawing of the blocks to form a unifrom grid with color.
         canvas.drawShapesWithBorders = true
         canvas.borderColor = Color(hue: y-130, saturation: 50, brightness: 75, alpha: 100)
         canvas.drawRectangle(bottomLeftX: x, bottomLeftY: y, width: 25, height: 25)
